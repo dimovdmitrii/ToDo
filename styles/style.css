@@ -17,13 +17,14 @@ main {
   flex-direction: column;
   align-items: center;
   width: 428px;
-  height: 926px;
+  max-height: 926px;
   border: 1px solid rgb(230, 221, 221);
   border-radius: 8px;
   position: relative;
   overflow: hidden;
   background: white;
   color: #333;
+  height: 100vh;
 }
 .header-group,
 .search-field,
