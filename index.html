@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@700&family=Sixtyfour&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div class="header-group">
+        <br />
+        <h2 class="main-header">Пятница</h2>
+        <p class="header-group__sub-header">2 Мая</p>
+      </div>
+      <br />
+      <div class="search-field">
+        <input type="text" class="search-field__input" placeholder="Поиск" />
+        <span class="search-field__icon"
+          ><img src="./assets/svg/state-layer.svg" alt=""
+        /></span>
+      </div>
+      <br />
+      <div class="split-button">
+        <button
+          class="split-button__button"
+          data-filter="all"
+          id="filter-all"
+          onclick="splitButtonClickHandler(this)"
+        >
+          <span class="split-button__button-icon">
+            <img src="./assets/svg/Selected icon.svg" alt=""
+          /></span>
+          Все
+        </button>
+        <button
+          class="split-button__button"
+          data-filter="active"
+          id="filter-active"
+          onclick="splitButtonClickHandler(this)"
+        >
+          <span class="split-button__button-icon">
+            <img src="./assets/svg/Selected icon.svg" alt="" />
+          </span>
+          Активные
+        </button>
+        <button
+          class="split-button__button"
+          data-filter="completed"
+          id="filter-done"
+          onclick="splitButtonClickHandler(this)"
+        >
+          <span class="split-button__button-icon">
+            <img src="./assets/svg/Selected icon.svg" alt="" />
+          </span>
+          Готовые
+        </button>
+      </div>
+      <br />
+      <ul class="todo_list"></ul>
+      <button class="float-button">
+        <span class="material-symbols-rounded">
+          <img src="./assets/svg/icon (2).svg" alt="edit" />
+        </span>
+      </button>
+      <div class="modal" id="modal">
+        <form class="create-form" id="create-form">
+          <input
+            type="text"
+            class="create-form__input"
+            placeholder="Описание"
+            name="description"
+            id="description"
+            required
+          />
+
+          <input
+            type="text"
+            class="create-form__input"
+            placeholder="Дата"
+            name="startDate"
+            id="startDate"
+            required
+          />
+          <div class="switch">
+            <span class="switch__text">Напомнить мне</span>
+            <label class="toggle_switch">
+              <input type="checkbox" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <br />
+
+          <div class="form__buttons-wrapper">
+            <button class="form-button form-button--primary" type="submit">
+              Добавить
+            </button>
+            <button class="form-button form-button--secondary" type="reset">
+              Отмена
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://npmcdn.com/flatpickr/dist/l10n/ru.js"></script>
+  <script src="./scripts/script.js"></script>
+</html>
