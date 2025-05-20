@@ -24,7 +24,7 @@ main {
   overflow: hidden;
   background: white;
   color: #333;
-  height: 100dvh;
+  height: 100vh;
 }
 .header-group,
 .search-field,
